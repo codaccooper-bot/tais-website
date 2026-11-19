@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TAIS | Tennessee Alternative Investments Society</title>
+<meta name="description" content="Tennessee Alternative Investments Society: preparing students for careers in private equity, hedge funds, equity research, investment banking, and asset management. Now recruiting our founding class.">
+<meta property="og:title" content="TAIS | Tennessee Alternative Investments Society">
+<meta property="og:description" content="Preparing University of Tennessee students for careers in private equity, hedge funds, equity research, investment banking, and asset management. Now recruiting our founding class this spring.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 144 144'%3E%3Crect width='72' height='72' fill='%23FF8200'/%3E%3Crect x='72' width='72' height='72' fill='%23FFFFFF'/%3E%3Crect y='72' width='72' height='72' fill='%23FFFFFF'/%3E%3Crect x='72' y='72' width='72' height='72' fill='%23FF8200'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --orange:#FF8200;
+  --ink:#1F1F1F;
+  --ink-2:#2A2A2A;
+  --grey:#4B4B4B;
+  --muted:#C9C9C2;
+  --paper:#FAFAF7;
+  --paper-2:#F1F0EB;
+  --line:#DEDDD6;
+  --serif:'Cormorant Garamond', Georgia, serif;
+  --sans:'Inter', system-ui, -apple-system, Segoe UI, sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img,svg{display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--grey)}
+.dark .eyebrow{color:var(--muted)}
+.rule{width:72px;height:4px;background:var(--orange);border:0;margin:0}
+h1,h2,h3{margin:0;font-weight:600}
+h2{font-family:var(--serif);font-size:clamp(36px,5vw,56px);line-height:1.05;letter-spacing:-.005em}
+h3{font-size:19px;font-weight:600;letter-spacing:-.01em}
+p{margin:0}
+section{padding:112px 0}
+.dark{background:var(--ink);color:#fff}
+
+/* Nav */
+.nav{position:sticky;top:0;z-index:20;background:rgba(31,31,31,.96);backdrop-filter:saturate(1.2) blur(8px);color:#fff;border-bottom:1px solid #333}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:24px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand-name{font-family:var(--serif);font-weight:700;font-size:28px;letter-spacing:.14em;line-height:1}
+.nav-links{display:flex;align-items:center;gap:28px;font-size:14px;font-weight:500}
+.nav-links a{text-decoration:none;color:#E6E6E0}
+.nav-links a:hover{color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 22px;font-family:var(--sans);font-size:14px;font-weight:600;letter-spacing:.04em;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background .15s,color .15s,border-color .15s}
+.btn-orange{background:var(--orange);color:var(--ink)}
+.btn-orange:hover{background:#FF9529}
+.btn-ghost{border-color:#fff;color:#fff;background:transparent}
+.btn-ghost:hover{background:#fff;color:var(--ink)}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-dark:hover{background:#000}
+.menu-btn{display:none;background:none;border:0;color:#fff;width:46px;height:46px;cursor:pointer}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;padding:120px 0 128px}
+.hero .wrap{position:relative;z-index:1}
+.hero-mark{margin-bottom:36px}
+.hero-title{font-family:var(--serif);font-weight:700;font-size:clamp(88px,15vw,176px);line-height:.82;letter-spacing:.14em}
+.hero .rule{margin:30px 0 22px}
+.hero-sub{font-size:14px;font-weight:600;letter-spacing:.32em;text-transform:uppercase}
+.hero-lede{max-width:640px;margin-top:28px;font-size:19px;line-height:1.6;color:#E6E6E0}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:40px}
+.hero-tracks{margin-top:56px;font-size:14px;letter-spacing:.08em;color:var(--muted)}
+.checker-strip{position:absolute;top:0;right:0;bottom:0;width:72px;
+  background-image:conic-gradient(var(--orange) 0 25%, #fff 0 50%, var(--orange) 0 75%, #fff 0);
+  background-size:72px 72px}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:72px;align-items:start}
+.about-grid .lead{font-size:19px;color:var(--grey);margin-top:24px}
+.pillars{display:grid;gap:0;border-top:1px solid var(--line)}
+.pillar{display:grid;grid-template-columns:72px 1fr;gap:20px;padding:28px 0;border-bottom:1px solid var(--line)}
+.pillar-num{font-family:var(--serif);font-size:40px;font-weight:600;line-height:1;color:var(--ink)}
+.pillar p{color:var(--grey);margin-top:6px}
+
+/* Divisions */
+.divisions{background:var(--paper-2)}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:56px;flex-wrap:wrap}
+.section-head .intro{max-width:460px;color:var(--grey)}
+.div-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:20px}
+.div-grid .div-card{grid-column:span 2}
+.div-grid .div-card:nth-child(n+4){grid-column:span 3}
+
+/* Curriculum */
+.cur-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:2px solid var(--ink)}
+.cur{padding:32px 28px 32px 0;border-bottom:1px solid var(--line)}
+.cur:nth-child(3n+2),.cur:nth-child(3n){padding-left:28px}
+.cur:not(:nth-child(3n)){border-right:1px solid var(--line)}
+.cur ul{margin:12px 0 0;padding:0;list-style:none;font-size:15px;color:var(--grey)}
+.cur li{padding:4px 0 4px 18px;position:relative}
+.cur li::before{content:"";position:absolute;left:0;top:13px;width:8px;height:8px;background:var(--orange)}
+
+/* Fund */
+.fund-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:72px;align-items:start}
+.fund-grid .lead{color:#E6E6E0;margin-top:24px;font-size:18px}
+.fund-phases{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.phase{border-top:3px solid var(--orange);padding-top:18px}
+.phase .eyebrow{display:block;margin-bottom:8px}
+.phase h3{color:#fff}
+.phase p{color:var(--muted);font-size:15px;margin-top:6px}
+.policy{list-style:none;margin:12px 0 0;padding:0;border-top:1px solid #3A3A3A}
+.policy li{padding:14px 0;border-bottom:1px solid #3A3A3A;color:#E6E6E0;font-size:15px}
+.programs{background:var(--paper-2)}
+.div-card{background:#fff;border:1px solid var(--line);padding:32px 26px 30px;display:flex;flex-direction:column;gap:14px}
+.div-card .tag{width:28px;height:28px;display:grid;grid-template-columns:14px 14px;grid-template-rows:14px 14px}
+.div-card .tag span:nth-child(1),.div-card .tag span:nth-child(4){background:var(--orange)}
+.div-card .tag span:nth-child(2),.div-card .tag span:nth-child(3){background:var(--ink)}
+.div-card p{color:var(--grey);font-size:15px}
+.div-card ul{margin:4px 0 0;padding:0;list-style:none;font-size:14px;color:var(--ink)}
+.div-card li{padding:8px 0;border-top:1px solid var(--line)}
+
+/* Programs */
+.prog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:2px solid var(--ink)}
+.prog{padding:36px 32px 36px 0;border-bottom:1px solid var(--line)}
+.prog:not(:nth-child(3n)){border-right:1px solid var(--line)}
+.prog:nth-child(3n+2),.prog:nth-child(3n){padding-left:32px}
+.prog .eyebrow{color:var(--grey);margin-bottom:12px;display:block}
+.prog p{color:var(--grey);margin-top:8px;font-size:15px}
+
+/* Join */
+.join-grid{display:grid;grid-template-columns:1fr 1.25fr;gap:72px;align-items:start}
+.join-grid .lead{color:#E6E6E0;margin-top:24px;font-size:18px}
+.steps{list-style:none;margin:0;padding:0;counter-reset:step}
+.steps li{display:grid;grid-template-columns:64px 1fr auto;gap:20px;align-items:baseline;padding:26px 0;border-top:1px solid #3A3A3A}
+.steps li:last-child{border-bottom:1px solid #3A3A3A}
+.steps .n{font-family:var(--serif);font-size:36px;font-weight:600;line-height:1;color:var(--orange)}
+.steps h3{color:#fff}
+.steps p{color:var(--muted);font-size:15px;margin-top:4px}
+.steps .date{font-size:13px;font-weight:600;letter-spacing:.08em;color:#fff;white-space:nowrap}
+.join-cta{margin-top:36px;display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.join-note{font-size:14px;color:var(--muted)}
+
+/* Employers */
+.emp{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.emp-list{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.emp-item{border-top:3px solid var(--ink);padding-top:18px}
+.emp-item p{color:var(--grey);font-size:15px;margin-top:6px}
+.emp .lead{color:var(--grey);font-size:18px;margin-top:24px}
+.emp .btn{margin-top:32px}
+
+/* Team */
+.team{background:var(--paper-2)}
+.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.member{background:#fff;border:1px solid var(--line)}
+.member .photo{aspect-ratio:1/1;background:var(--ink);display:flex;align-items:center;justify-content:center;color:#6E6E68;font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+.member .info{padding:20px 22px 24px}
+.member .role{font-size:13px;color:var(--grey);margin-top:2px}
+
+/* Contact / footer */
+.contact .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:72px;align-items:end}
+.contact-rows{display:grid;gap:0;border-top:1px solid #3A3A3A}
+.contact-row{display:flex;justify-content:space-between;gap:24px;padding:20px 0;border-bottom:1px solid #3A3A3A;font-size:16px}
+.contact-row span:first-child{color:var(--muted);font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+footer{background:#161616;color:var(--muted);padding:36px 0;font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+footer .brand{color:#fff}
+footer .brand-name{font-size:22px}
+
+/* Announcement bar */
+.announce{background:var(--orange);color:var(--ink);font-size:13px;font-weight:600;letter-spacing:.04em;text-align:center;padding:10px 20px}
+.announce a{text-decoration:underline;text-underline-offset:3px;margin-left:6px}
+
+/* Social */
+.social{display:flex;gap:10px}
+.social a{width:40px;height:40px;display:inline-flex;align-items:center;justify-content:center;border:1px solid #444;color:#E6E6E0;transition:background .15s,color .15s,border-color .15s}
+.social a:hover{background:var(--orange);border-color:var(--orange);color:var(--ink)}
+.hero-social{display:flex;align-items:center;gap:16px;margin-top:28px;font-size:13px;color:var(--muted);letter-spacing:.08em}
+
+/* Founding class */
+.found-grid{display:grid;grid-template-columns:1fr 1.25fr;gap:72px;align-items:start}
+.found-grid .lead{font-size:19px;color:var(--grey);margin-top:24px}
+.found-list{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.found-item{background:#fff;border:1px solid var(--line);border-top:3px solid var(--orange);padding:24px 22px}
+.found-item p{color:var(--grey);font-size:15px;margin-top:6px}
+
+/* FAQ */
+#faq{border-top:1px solid var(--line)}
+.faq{max-width:860px;border-top:2px solid var(--ink)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:24px 40px 24px 0;font-size:18px;font-weight:600;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:4px;top:50%;transform:translateY(-50%);font-size:26px;font-weight:400;color:var(--orange)}
+.faq details[open] summary::after{content:"–"}
+.faq details p{color:var(--grey);padding:0 40px 24px 0;margin-top:-8px}
+
+/* Follow */
+.follow{background:var(--paper-2)}
+.follow-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.follow-card{display:flex;align-items:center;gap:22px;background:var(--ink);color:#fff;padding:32px 28px;text-decoration:none;transition:transform .15s}
+.follow-card:hover{transform:translateY(-2px)}
+.follow-card .icon{flex:none;width:56px;height:56px;background:var(--orange);color:var(--ink);display:flex;align-items:center;justify-content:center}
+.follow-card .label{font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+.follow-card .handle{font-family:var(--serif);font-size:30px;font-weight:600;line-height:1.1;margin-top:4px}
+.follow-card .arrow{margin-left:auto;font-size:24px;color:var(--orange)}
+
+/* Responsive */
+@media (max-width: 1000px){
+  .div-grid{grid-template-columns:repeat(2,1fr)}
+  .div-grid .div-card,.div-grid .div-card:nth-child(n+4){grid-column:auto}
+  .cur-grid{grid-template-columns:1fr 1fr}
+  .cur,.cur:nth-child(3n+2),.cur:nth-child(3n){padding:28px 24px 28px 0;border-right:0}
+  .cur:nth-child(odd){border-right:1px solid var(--line)}
+  .cur:nth-child(even){padding-left:24px}
+  .team-grid{grid-template-columns:repeat(2,1fr)}
+  .prog-grid{grid-template-columns:1fr 1fr}
+  .prog,.prog:nth-child(3n+2),.prog:nth-child(3n){padding:32px 24px 32px 0;border-right:0}
+  .prog:nth-child(odd){border-right:1px solid var(--line)}
+  .prog:nth-child(even){padding-left:24px}
+}
+@media (max-width: 860px){
+  section{padding:80px 0}
+  .about-grid,.join-grid,.emp,.contact .wrap,.fund-grid,.found-grid{grid-template-columns:1fr;gap:44px}
+  .follow-grid{grid-template-columns:1fr}
+  .nav-links{display:none;position:absolute;top:72px;left:0;right:0;flex-direction:column;align-items:flex-start;gap:0;background:var(--ink);padding:8px 28px 24px;border-bottom:1px solid #333}
+  .nav-links.open{display:flex}
+  .nav-links a{padding:14px 0;width:100%;border-bottom:1px solid #333}
+  .nav-links .btn{margin-top:16px;width:100%}
+  .menu-btn{display:inline-flex;align-items:center;justify-content:center}
+  .checker-strip{width:36px;background-size:36px 36px}
+  .hero{padding:88px 0 96px}
+  .hero .wrap{padding-right:64px}
+}
+@media (max-width: 560px){
+  .wrap{padding:0 20px}
+  .div-grid,.team-grid,.prog-grid,.emp-list,.cur-grid,.fund-phases,.found-list{grid-template-columns:1fr}
+  .follow-card{padding:24px 20px;gap:16px}
+  .follow-card .handle{font-size:24px;word-break:break-word}
+  .follow-card .arrow{display:none}
+  .cur,.cur:nth-child(even),.cur:nth-child(odd){padding:24px 0;border-right:0}
+  .prog,.prog:nth-child(even),.prog:nth-child(odd){padding:28px 0;border-right:0}
+  .steps li{grid-template-columns:48px 1fr}
+  .steps .date{grid-column:2}
+  .hero-sub{letter-spacing:.2em;font-size:12px}
+  .contact-row{flex-direction:column;gap:4px}
+}
+</style>
+</head>
+<body>
+
+<div class="announce">Now recruiting the Spring 2027 founding class.<a href="https://docs.google.com/forms/d/e/1FAIpQLSdY0k1z0gvleesvdwZTBh7GWApy82zyj8C8byhqX6siRW8eAg/viewform">Apply now</a></div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="TAIS home">
+      <svg width="40" height="40" viewBox="0 0 144 144" aria-hidden="true">
+        <rect width="72" height="72" fill="#FF8200"/><rect x="72" width="72" height="72" fill="#FFFFFF"/>
+        <rect y="72" width="72" height="72" fill="#FFFFFF"/><rect x="72" y="72" width="72" height="72" fill="#FF8200"/>
+        <text x="36" y="38" text-anchor="middle" dominant-baseline="central" font-family="Cormorant Garamond, serif" font-weight="700" font-size="56" fill="#FFFFFF">T</text>
+        <text x="108" y="38" text-anchor="middle" dominant-baseline="central" font-family="Cormorant Garamond, serif" font-weight="700" font-size="56" fill="#1F1F1F">A</text>
+        <text x="36" y="110" text-anchor="middle" dominant-baseline="central" font-family="Cormorant Garamond, serif" font-weight="700" font-size="56" fill="#1F1F1F">I</text>
+        <text x="108" y="110" text-anchor="middle" dominant-baseline="central" font-family="Cormorant Garamond, serif" font-weight="700" font-size="56" fill="#FFFFFF">S</text>
+      </svg>
+      <span class="brand-name">TAIS</span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav class="nav-links" id="navLinks" aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#divisions">Desks</a>
+      <a href="#curriculum">Curriculum</a>
+      <a href="#fund">Fund</a>
+      <a href="#founding">Founding class</a>
+      <a href="#employers">Employers</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn-orange" href="#join">Join TAIS</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero dark" aria-labelledby="hero-title">
+  <div class="checker-strip" aria-hidden="true"></div>
+  <div class="wrap">
+    <h1 class="hero-title" id="hero-title">TAIS</h1>
+    <hr class="rule">
+    <p class="hero-sub">Tennessee Alternative Investments Society</p>
+    <p class="hero-lede">A student-run society preparing University of Tennessee students for careers in private equity, hedge funds, equity research, investment banking, and asset management. We’re recruiting our founding class this spring.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-orange" href="https://docs.google.com/forms/d/e/1FAIpQLSdY0k1z0gvleesvdwZTBh7GWApy82zyj8C8byhqX6siRW8eAg/viewform">Apply now</a>
+      <a class="btn btn-ghost" href="#founding">Why join now</a>
+    </div>
+    <div class="hero-social">
+      <span>FOLLOW FOR UPDATES</span>
+      <div class="social">
+        <a href="https://www.instagram.com/tais_ut/" aria-label="TAIS on Instagram" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://www.linkedin.com/company/tennessee-alternative-investments-society/" aria-label="TAIS on LinkedIn" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3V9.5zm7 0h3.8v1.6h.05c.53-1 1.83-2.05 3.77-2.05C21.6 9.05 22 11.7 22 15v6h-4v-5.3c0-1.27-.02-2.9-1.77-2.9-1.77 0-2.04 1.38-2.04 2.8V21H10V9.5z"/></svg></a>
+      </div>
+    </div>
+    <p class="hero-tracks">Private Equity &nbsp;·&nbsp; Hedge Funds &nbsp;·&nbsp; Equity Research &nbsp;·&nbsp; Private Credit &nbsp;·&nbsp; Investment Banking &nbsp;·&nbsp; Asset Management</p>
+  </div>
+</section>
+
+<section id="about" aria-labelledby="about-title">
+  <div class="wrap about-grid">
+    <div>
+      <p class="eyebrow">About</p>
+      <h2 id="about-title" style="margin-top:16px">Built for the buyside. Open to every path in high finance.</h2>
+      <p class="lead">TAIS trains members in the technical skills, investment judgment, and professional network that top firms look for. Most careers in alternatives start in investment banking, so we prepare members for the full path, from first internship to the buyside.</p>
+    </div>
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar-num">01</div>
+        <div><h3>Train</h3><p>A structured curriculum covering accounting, valuation, LBO modeling, and interview preparation.</p></div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">02</div>
+        <div><h3>Invest</h3><p>Desk-based research and pitches across public and private markets, presented to members and industry judges.</p></div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">03</div>
+        <div><h3>Connect</h3><p>Speaker events, firm visits, and an alumni network that links members to the firms where they want to work.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="divisions" class="divisions" aria-labelledby="div-title">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Divisions</p>
+        <h2 id="div-title" style="margin-top:16px">Five desks, one society</h2>
+      </div>
+      <p class="intro">Every member joins a desk, works on live research with a small team, and presents to the full society each semester.</p>
+    </div>
+    <div class="div-grid">
+      <article class="div-card">
+        <div class="tag" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+        <h3>Private Equity</h3>
+        <p>How sponsors source, underwrite, and create value in companies.</p>
+        <ul><li>LBO modeling</li><li>Deal case studies</li><li>PE case competitions</li></ul>
+      </article>
+      <article class="div-card">
+        <div class="tag" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+        <h3>Public Markets and Equity Research</h3>
+        <p>Fundamental research on public companies, from long/short pitches to sector coverage.</p>
+        <ul><li>Long and short pitches</li><li>Sector coverage and earnings models</li><li>Semester research reports</li></ul>
+      </article>
+      <article class="div-card">
+        <div class="tag" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+        <h3>Credit and Real Assets</h3>
+        <p>Private credit, special situations, and real estate investing.</p>
+        <ul><li>Direct lending analysis</li><li>Distressed case studies</li><li>Real estate underwriting</li></ul>
+      </article>
+      <article class="div-card">
+        <div class="tag" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+        <h3>Investment Banking</h3>
+        <p>The most common path into the buyside, and the core technical foundation.</p>
+        <ul><li>M&amp;A and valuation technicals</li><li>Mock interviews</li><li>Recruiting timelines</li></ul>
+      </article>
+      <article class="div-card">
+        <div class="tag" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+        <h3>Asset Management</h3>
+        <p>How long-only managers, endowments, and family offices build portfolios.</p>
+        <ul><li>Portfolio construction</li><li>Manager selection and allocators</li><li>Wealth management and alternatives</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="curriculum" aria-labelledby="cur-title">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Curriculum</p>
+        <h2 id="cur-title" style="margin-top:16px">What we cover</h2>
+      </div>
+      <p class="intro">New members spend their first semester on technical foundations and recruiting prep. After that, members join a desk, and the whole society meets for sessions on markets and AI in finance.</p>
+    </div>
+    <div class="cur-grid">
+      <div class="cur"><h3>Technical foundations</h3><ul><li>The three financial statements</li><li>DCF, trading comps, precedent transactions</li><li>LBO and M&amp;A modeling</li><li>Reading filings and earnings calls</li></ul></div>
+      <div class="cur"><h3>Private equity</h3><ul><li>Fund structure, fees, and carry</li><li>Buyouts, growth equity, venture, secondaries</li><li>Diligence and investment memos</li><li>Value creation and exits</li></ul></div>
+      <div class="cur"><h3>Public markets and equity research</h3><ul><li>Long/short idea generation</li><li>Short selling and forensic accounting</li><li>Sector coverage and earnings notes</li><li>Hedge fund strategies</li></ul></div>
+      <div class="cur"><h3>Credit and real assets</h3><ul><li>Direct lending and leveraged finance</li><li>Distressed debt and restructuring</li><li>Real estate underwriting</li><li>Infrastructure and energy</li></ul></div>
+      <div class="cur"><h3>Investment banking</h3><ul><li>Bank types and group structure</li><li>Pitch books and deal processes</li><li>Sell-side and buy-side M&amp;A</li><li>The path from banking to the buyside</li></ul></div>
+      <div class="cur"><h3>Asset management</h3><ul><li>Long-only investing</li><li>Endowments, pensions, and family offices</li><li>Portfolio construction and allocation</li><li>Alternatives in wealth management</li></ul></div>
+      <div class="cur"><h3>Markets and macro</h3><ul><li>Weekly market recaps</li><li>Rates, the Fed, and credit spreads</li><li>Deal activity and fundraising trends</li><li>Industry deep dives</li></ul></div>
+      <div class="cur"><h3>Recruiting and careers</h3><ul><li>Recruiting timelines by track</li><li>Résumés and networking</li><li>Technical and behavioral interviews</li><li>Stock pitch and case interviews</li></ul></div>
+      <div class="cur"><h3>Finance and AI</h3><ul><li>How funds use AI in research</li><li>Python and LLM tools for analysts</li><li>Introduction to quant strategies</li><li>Bloomberg, FactSet, and alternative data</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="fund" class="dark" aria-labelledby="fund-title">
+  <div class="wrap fund-grid">
+    <div>
+      <p class="eyebrow">Student-managed fund</p>
+      <h2 id="fund-title" style="margin-top:16px">The TAIS Fund</h2>
+      <p class="lead">Desks pitch, the society votes, and every position is tracked against a benchmark. The fund starts as a paper portfolio so members build a real track record from day one.</p>
+      <a class="btn btn-orange" href="#contact" style="margin-top:32px">Support the fund</a>
+    </div>
+    <div>
+      <div class="fund-phases">
+        <div class="phase"><span class="eyebrow">Phase one</span><h3>Paper portfolio</h3><p>A full trade log and performance reported against the S&amp;P 500.</p></div>
+        <div class="phase"><span class="eyebrow">Phase two</span><h3>Real capital</h3><p>Funding raised from alumni and firms to manage a live portfolio.</p></div>
+      </div>
+      <h3 style="margin-top:40px;color:#fff">Investment policy</h3>
+      <ul class="policy">
+        <li>Liquid stocks and ETFs only</li>
+        <li>No options or margin</li>
+        <li>Position size limits</li>
+        <li>Every position approved by a society vote</li>
+        <li>Performance report published each semester</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="programs" class="programs" aria-labelledby="prog-title">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Programs</p>
+        <h2 id="prog-title" style="margin-top:16px">What members do</h2>
+      </div>
+    </div>
+    <div class="prog-grid">
+      <div class="prog"><span class="eyebrow">Weekly</span><h3>Technical training</h3><p>Accounting, the three statements, DCF, comparables, and LBOs, taught by members who have recruited.</p></div>
+      <div class="prog"><span class="eyebrow">Each semester</span><h3>Investment desks</h3><p>Small teams research and pitch ideas, defend them in front of the society, and publish a research report.</p></div>
+      <div class="prog"><span class="eyebrow">Monthly</span><h3>Speaker series</h3><p>Conversations with professionals in private equity, hedge funds, credit, and banking.</p></div>
+      <div class="prog"><span class="eyebrow">Each year</span><h3>Firm visits</h3><p>Trips to meet firms in Nashville, Atlanta, and New York.</p></div>
+      <div class="prog"><span class="eyebrow">Each semester</span><h3>Pitch competition</h3><p>Members present their best ideas to a panel of industry judges.</p></div>
+      <div class="prog"><span class="eyebrow">Each fall</span><h3>Résumé book</h3><p>Member résumés shared directly with recruiting partners.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="founding" aria-labelledby="found-title">
+  <div class="wrap found-grid">
+    <div>
+      <p class="eyebrow">Founding class · Spring 2027</p>
+      <h2 id="found-title" style="margin-top:16px">Help build TAIS from the ground up</h2>
+      <p class="lead">The founding class sets the standard for every class that follows. Founding members shape the desks, the curriculum, and the fund, and step into leadership roles early.</p>
+      <a class="btn btn-dark" href="https://docs.google.com/forms/d/e/1FAIpQLSdY0k1z0gvleesvdwZTBh7GWApy82zyj8C8byhqX6siRW8eAg/viewform" style="margin-top:32px">Apply to the founding class</a>
+    </div>
+    <div class="found-list">
+      <div class="found-item"><h3>Lead a desk</h3><p>Early members are first in line to run desks and sit on the executive board.</p></div>
+      <div class="found-item"><h3>Shape the curriculum</h3><p>Help decide what we teach, which firms we visit, and which speakers we bring in.</p></div>
+      <div class="found-item"><h3>Seed the track record</h3><p>Make the first pitches and first positions in the TAIS Fund.</p></div>
+      <div class="found-item"><h3>Build the network</h3><p>Be the first alumni that future members call when they recruit.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="join" class="dark" aria-labelledby="join-title">
+  <div class="wrap join-grid">
+    <div>
+      <p class="eyebrow">Membership</p>
+      <h2 id="join-title" style="margin-top:16px">Join TAIS</h2>
+      <p class="lead">We look for curiosity, work ethic, and genuine interest in investing. No prior finance experience is required to apply.</p>
+      <div class="join-cta">
+        <a class="btn btn-orange" href="https://docs.google.com/forms/d/e/1FAIpQLSdY0k1z0gvleesvdwZTBh7GWApy82zyj8C8byhqX6siRW8eAg/viewform">Apply now</a>
+        <span class="join-note">Applications for the Spring 2027 founding class are open. Dates are posted on <a href="https://www.instagram.com/tais_ut/">Instagram</a> and <a href="https://www.linkedin.com/company/tennessee-alternative-investments-society/">LinkedIn</a>.</span>
+      </div>
+    </div>
+    <ol class="steps">
+      <li><span class="n">1</span><div><h3>Information sessions</h3><p>Meet the board and learn how TAIS works.</p></div><span class="date">Spring 2027</span></li>
+      <li><span class="n">2</span><div><h3>Application</h3><p>A short written application and résumé.</p></div><span class="date">Spring 2027</span></li>
+      <li><span class="n">3</span><div><h3>Interviews</h3><p>A behavioral conversation with members of the board.</p></div><span class="date">Spring 2027</span></li>
+      <li><span class="n">4</span><div><h3>New member training</h3><p>Onboarding into the curriculum and your desk.</p></div><span class="date">Spring 2027</span></li>
+    </ol>
+  </div>
+</section>
+
+<section id="employers" aria-labelledby="emp-title">
+  <div class="wrap emp">
+    <div>
+      <p class="eyebrow">Employers and alumni</p>
+      <h2 id="emp-title" style="margin-top:16px">Recruit trained, motivated students</h2>
+      <p class="lead">TAIS members arrive at interviews prepared. We partner with firms and alumni who want an early look at strong candidates from the University of Tennessee.</p>
+      <a class="btn btn-dark" href="#contact">Partner with TAIS</a>
+    </div>
+    <div class="emp-list">
+      <div class="emp-item"><h3>Résumé book</h3><p>Receive member résumés each recruiting cycle.</p></div>
+      <div class="emp-item"><h3>Speak</h3><p>Lead a session on your firm, strategy, or career path.</p></div>
+      <div class="emp-item"><h3>Judge</h3><p>Evaluate member pitches at our semester competition.</p></div>
+      <div class="emp-item"><h3>Host a visit</h3><p>Welcome a small group of members to your office.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" aria-labelledby="faq-title">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">FAQ</p>
+        <h2 id="faq-title" style="margin-top:16px">Common questions</h2>
+      </div>
+      <p class="intro">Still curious? Send us a message on <a href="https://www.instagram.com/tais_ut/">Instagram</a> or <a href="https://www.linkedin.com/company/tennessee-alternative-investments-society/">LinkedIn</a>.</p>
+    </div>
+    <div class="faq">
+      <details><summary>Do I need finance experience to apply?</summary><p>No. We look for curiosity, work ethic, and genuine interest in investing. New members spend their first semester on technical foundations.</p></details>
+      <details><summary>Who can apply?</summary><p>University of Tennessee students interested in private equity, hedge funds, equity research, investment banking, or asset management.</p></details>
+      <details><summary>What does the founding class do differently?</summary><p>Founding members help build the society itself: setting up desks, shaping the curriculum, making the first fund pitches, and taking on leadership roles early.</p></details>
+      <details><summary>What if I'm not sure which career path I want?</summary><p>That's expected. The curriculum covers every major path in high finance, and members can explore several areas before settling on a desk.</p></details>
+      <details><summary>How do I hear about information sessions?</summary><p>Follow <a href="https://www.instagram.com/tais_ut/">@tais_ut</a> on Instagram and the society on <a href="https://www.linkedin.com/company/tennessee-alternative-investments-society/">LinkedIn</a>. Every date is posted there first.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="follow" class="follow" aria-labelledby="follow-title">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Stay updated</p>
+        <h2 id="follow-title" style="margin-top:16px">Follow TAIS</h2>
+      </div>
+      <p class="intro">Info session dates, application deadlines, speaker events, and founding class news.</p>
+    </div>
+    <div class="follow-grid">
+      <a class="follow-card" href="https://www.instagram.com/tais_ut/" target="_blank" rel="noopener">
+        <span class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span>
+        <span><span class="label">Instagram</span><span class="handle" style="display:block">@tais_ut</span></span>
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="follow-card" href="https://www.linkedin.com/company/tennessee-alternative-investments-society/" target="_blank" rel="noopener">
+        <span class="icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3V9.5zm7 0h3.8v1.6h.05c.53-1 1.83-2.05 3.77-2.05C21.6 9.05 22 11.7 22 15v6h-4v-5.3c0-1.27-.02-2.9-1.77-2.9-1.77 0-2.04 1.38-2.04 2.8V21H10V9.5z"/></svg></span>
+        <span><span class="label">LinkedIn</span><span class="handle" style="display:block">Tennessee Alternative Investments Society</span></span>
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="dark contact" aria-labelledby="contact-title">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Contact</p>
+      <h2 id="contact-title" style="margin-top:16px">Get in touch</h2>
+    </div>
+    <div class="contact-rows">
+      <div class="contact-row"><span>Apply</span><span><a href="https://docs.google.com/forms/d/e/1FAIpQLSdY0k1z0gvleesvdwZTBh7GWApy82zyj8C8byhqX6siRW8eAg/viewform">Founding class application</a></span></div>
+      <div class="contact-row"><span>LinkedIn</span><span><a href="https://www.linkedin.com/company/tennessee-alternative-investments-society/">Tennessee Alternative Investments Society</a></span></div>
+      <div class="contact-row"><span>Instagram</span><span><a href="https://www.instagram.com/tais_ut/">@tais_ut</a></span></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Back to top">
+      <svg width="28" height="28" viewBox="0 0 144 144" aria-hidden="true">
+        <rect width="72" height="72" fill="#FF8200"/><rect x="72" width="72" height="72" fill="#FFFFFF"/>
+        <rect y="72" width="72" height="72" fill="#FFFFFF"/><rect x="72" y="72" width="72" height="72" fill="#FF8200"/>
+      </svg>
+      <span class="brand-name">TAIS</span>
+    </a>
+    <p>Tennessee Alternative Investments Society &nbsp;·&nbsp; Knoxville, Tennessee</p>
+    <div class="social">
+      <a href="https://www.instagram.com/tais_ut/" aria-label="TAIS on Instagram" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+      <a href="https://www.linkedin.com/company/tennessee-alternative-investments-society/" aria-label="TAIS on LinkedIn" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3V9.5zm7 0h3.8v1.6h.05c.53-1 1.83-2.05 3.77-2.05C21.6 9.05 22 11.7 22 15v6h-4v-5.3c0-1.27-.02-2.9-1.77-2.9-1.77 0-2.04 1.38-2.04 2.8V21H10V9.5z"/></svg></a>
+    </div>
+    <p>© 2026 TAIS</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn = document.getElementById('menuBtn');
+  var links = document.getElementById('navLinks');
+  btn.addEventListener('click', function(){
+    var open = links.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  });
+  links.addEventListener('click', function(e){
+    if (e.target.tagName === 'A') {
+      links.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+      btn.setAttribute('aria-label', 'Open menu');
+    }
+  });
+})();
+</script>
+</body>
+</html>
